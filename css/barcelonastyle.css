@@ -1,0 +1,344 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  padding: 1rem;
+
+}
+.main-nav {
+  background: white;
+  position: sticky;
+  top: 0;
+  grid-area: navbar;
+  z-index: 9;
+  box-shadow: 0 3px 25px gray;
+}
+.main-nav .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  grid-auto-rows: auto;
+}
+.main-nav .container .logo {
+  display: flex;
+}
+.main-nav .container h1 {
+  align-self: flex-start;
+  color: blue;
+}
+.main-nav .container span,
+.main-nav .container .logo i {
+  color: #c72727;
+}
+.main-nav .social {
+  justify-self: center;
+}
+.main-nav .social a {
+  color: gray;
+}
+.main-nav .social a:hover {
+  color: #c72727;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.main-nav ul li a {
+  font-weight: bolder;
+  font-size: 20px;
+  color: #777;
+
+}
+.main-nav ul li a:hover {
+  color: black;   
+  border-bottom:7px solid #c72727;
+  transition: all .2s ease-in-out;  
+}
+.content {
+  position: relative;
+  background: black;
+  color: white;
+  padding: 2rem;
+}
+.content:before {
+  content: "";
+  background: url("https://wallpapercave.com/wp/BBnxA9Z.jpg") no-repeat center
+    center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+}
+.btn {
+  background: brown;
+  color: white;
+}
+.content .main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+
+}
+.content .main .child {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.content .main .child div,
+.article .container .art-cont-2 > div:nth-last-of-type(2) div {
+  display: inline-block;
+  background: orange;
+  border-radius: 15px;
+  padding: 3px 11px;
+  color: white;
+}
+.content .main .child p {
+  margin-bottom: 1rem;
+}
+.article {
+  background: #f3f3f3;
+  padding-top: 2rem;
+}
+.article .container .art-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  grid-gap: 1rem;
+  padding-bottom: 2rem;
+}
+.article .container h1 {
+  padding: 1rem 0 0.5rem 0;
+}
+.article .container .art-main .image{
+  overflow: hidden;  
+  display: flex;
+}
+.article .container .art-main img{  
+  width: 100%;
+  transition: transform .5s ease-in-out;
+  transform-style: preserve-3d
+}
+.article .container .art-main img:hover{
+  transform: scale(1.2) translate(-2px, -5px);
+
+}
+.article .container .art-main > div {
+  padding: 1rem;
+  background: white;
+  overflow: hidden;
+}
+.article .container .art-main .art-div {
+  color: white;
+  display: inline;
+  padding: 5px 11px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.article .container .art-cont-1 {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-column: span 2;
+}
+
+.article .container .art-cont-1 div:nth-of-type(2) {
+  padding-left: 1rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+.article .container .art-main .d1 {
+  background: blueviolet;
+}
+.article .container .art-main .d2 {
+  background: orange;
+}
+.article .container .art-main .d3 {
+  background: dodgerblue;
+}
+.article .container .art-main .d4 {
+  background: orange;
+}
+.article .container .art-main .d5 {
+  background: dodgerblue;
+}
+.article .container .art-main .d6 {
+  background: orange;
+}
+.article .container .art-main .d7 {
+  background: blueviolet;
+}
+.article .container .art-main .art-cont-2 img{
+  transform: none;
+}
+.article .container .art-main .art-cont-2 {
+  padding: 0;
+  perspective: 1000px;  
+  background:transparent;
+  color: white;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+.article .container .art-main .art-cont-2 .flip{
+  position: relative;
+  transition: transform .5s ease-in-out;
+  transform-style: preserve-3d;
+
+}
+.article .container .art-main .art-cont-2:hover .flip{
+  transform: rotateY(180deg);
+  
+}
+.article .container .art-main .art-cont-2 .face{
+  position: absolute;  
+  backface-visibility: hidden
+}
+.article .container .art-main .art-cont-2 .back{
+  position: absolute;
+  background: #333;
+  height: 100vh;
+  padding: 1rem;
+  transform: rotateY(180deg);
+  backface-visibility: hidden
+}
+
+.article .container .art-cont-3 {
+  background: white;
+}
+
+.article .container .art-main .art-cont-6 {
+  position: relative;
+  background: #c72727;
+  color: white;
+  overflow: hidden;
+  padding: 0;
+  
+}
+.article .container .art-main .art-cont-6> div:first-of-type{
+  padding: 1rem;
+
+}
+.article .container .art-main .art-cont-6> div{
+  position: absolute;
+  transition: all .5s ease-in-out;
+  
+}
+.article .container .art-main .art-cont-6 .mask {  
+  background: #333;  
+  width: 100%;
+  height: 100%;
+  opacity: 0.6;
+  top:0;
+  left:0; 
+  
+}
+
+.article .container .art-main .art-cont-6:hover .mask {  
+  background: #333;  
+  width: 0;
+  height: 0;
+  left: 50%;
+  top:50%;  
+  opacity: 0; 
+}
+
+.article .container .art-cont-7 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-column: span 2;
+}
+
+.article .container .art-cont-7> div:first-child {
+  padding-right: 1rem;
+  line-height: 1.5;
+  padding-top: 2rem;
+}
+footer {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+footer h2 {
+  margin-bottom: 1rem;
+}
+footer .item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+footer .item2 input {
+  padding: 0.5rem;
+}
+footer .item2 a {
+  color: white;
+  background: #c72727;
+  text-align: center;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+footer .item2 a:hover {
+  background: rgb(129, 28, 28);
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  padding: 0.75rem 0;
+  border-bottom: 1px dotted #444;
+}
+footer ul li a {
+  color: white;
+  padding: 1rem 0;
+}
+footer ul li a:hover {
+  color: #c72727;
+}
+footer .item4 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer .item4 a {
+  margin-top: 1rem;
+  color: white;
+  background: orange;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+}
+footer .item4 a:hover {
+  background: rgb(197, 128, 0);
+}
+footer .copy {
+  background: #444;
+  grid-column: span 4;
+  padding: 1rem;
+  text-align: center;
+}
+@keyframes border-show{
+  100%{border-bottom-width: 0px; }
+  0%{border-bottom: 7px solid #c72727  ; }
+
+}
